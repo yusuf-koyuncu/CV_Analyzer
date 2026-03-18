@@ -18,7 +18,7 @@ def extract_text_from_pdf(pdf_path):
 def find_skills(text):
     skills_database = [
         "Python", "SQL", "React", "JavaScript", "C#", r"C\+\+", "Java", 
-        "Docker", "Git", "HTML", "CSS", "Node.js", "Django", "PostgreSQL"
+        "Docker", "Git", "HTML", "CSS", "Node.js", "Django", "PostgreSQL", "AWS"
     ]
     
     found_skills = []
