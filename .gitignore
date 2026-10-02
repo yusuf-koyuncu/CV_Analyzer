@@ -44,3 +44,6 @@ yarn-error.log*
 .idea/
 *.swp
 *.swo
+
+# Visual Studio
+.vs/

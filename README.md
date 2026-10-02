@@ -2,8 +2,17 @@
 
 This project is a full-stack application that analyzes CVs in PDF format, extracts skills, and calculates compatibility scores with a job description.
 
-## 📽 Demo
-![Demo Project Animation](demo.gif)
+## 📸 Screenshots
+
+The dashboard (in Turkish) reads candidates from the API, and the score is the share of the job description's required skills that were found in each CV. The screenshots use sample data.
+
+**Candidate dashboard (React)**
+
+![Candidate dashboard](docs/screenshots/01-dashboard.png)
+
+**Backend API (FastAPI, auto-generated docs)**
+
+![API docs](docs/screenshots/02-api-docs.png)
 
 ## 🛠 Technologies Used
 
