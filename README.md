@@ -27,6 +27,7 @@ CV_Analyzer_Project/
 ├── cv-frontend/          # React Dashboard
 ├── parser.py             # CV Analysis Engine (Regex & PDF)
 ├── main.py               # FastAPI Backend API
+├── sample_cv.pdf         # Fictional CV used by the parser by default
 ├── .gitignore            # Git exclusion file
 └── README.md             # Documentation
 ```
@@ -44,6 +45,8 @@ Then, run the parser to analyze CVs and populate the database:
 ```bash
 python parser.py
 ```
+
+By default it analyzes the fictional `sample_cv.pdf` included in the repository. To analyze your own CV, put the PDF in the project folder and change the file name in `parser.py`.
 
 Finally, start the API:
 ```bash

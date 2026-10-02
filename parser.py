@@ -57,7 +57,7 @@ def save_to_db(pdf_name, skills, score):
     print(f"Veritabanı güncellendi: {pdf_name} kaydedildi.")
 
 if __name__ == "__main__":
-    pdf_ismi = "Yusuf_Koyuncu_CV.pdf" 
+    pdf_ismi = "sample_cv.pdf" 
     is_ilani_kriterleri = ["Python", "React", "SQL", "Docker", "AWS", "C++"]
     
     print(f"--- {pdf_ismi} Analizi Başlıyor ---")
