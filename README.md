@@ -18,7 +18,7 @@ The dashboard (in Turkish) reads candidates from the API, and the score is the s
 
 -   **Backend:** [FastAPI](https://fastapi.tiangolo.com/) (Python), SQLite, Regex-based Parser.
 -   **Frontend:** [React](https://reactjs.org/) (JavaScript/CSS), Fetch API.
--   **Libraries:** PyPDF2 (PDF parsing), sqlite3 (Database).
+-   **Libraries:** PyMuPDF (PDF parsing), sqlite3 (Database).
 
 ## 📂 Project Structure
 
@@ -38,7 +38,7 @@ CV_Analyzer_Project/
 
 First, install the required libraries:
 ```bash
-pip install fastapi uvicorn PyPDF2
+pip install fastapi uvicorn PyMuPDF
 ```
 
 Then, run the parser to analyze CVs and populate the database:
