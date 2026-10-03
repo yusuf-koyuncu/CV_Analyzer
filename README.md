@@ -76,3 +76,26 @@ The interface will open at: `http://localhost:3000`
 ---
 Developed by: **Yusuf Koyuncu**
 
+
+## Evaluation
+
+`tests/` contains a small harness that measures how well `parser.py` finds the 15 listed skills.
+
+```bash
+pip install pymupdf
+python tests/download_samples.py --n 100 --seed 7 --out tests/data/holdout   # public sample resumes
+python tests/evaluate.py tests/data/holdout                                  # needs poppler's pdftotext on PATH
+```
+
+Ground truth comes from an independent extractor (`pdftotext`) plus strict name and alias regexes, so
+the numbers measure skill extraction, not whether a candidate truly has a skill. PDFs without
+extractable text (scans) are not scored.
+
+Results on 100 sample resumes that were not used while writing the aliases (93 with text), before the
+final alias fix: 99.7% precision, 99.7% recall, about 30 ms per CV. The original PyPDF2 version
+reached 99.6% precision and 90.3% recall at about 147 ms per CV on the same set. The single false
+positive comes from the reference extractor gluing words together, not from the parser. Once the
+last miss ("C / C ++") was fixed the same set scores 100% recall, but it is no longer a clean hold-out.
+Limits: only 15 skills, English-language resumes, one public dataset
+([d4rk3r/resumes-raw-pdf](https://huggingface.co/datasets/d4rk3r/resumes-raw-pdf), MIT), and the
+sample PDFs are real people's resumes, so they are git-ignored and must not be committed.

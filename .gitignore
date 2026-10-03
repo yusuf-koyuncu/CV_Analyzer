@@ -50,3 +50,7 @@ yarn-error.log*
 
 # Personal CV (do not commit)
 Yusuf_Koyuncu_CV.pdf
+
+# Evaluation PDFs are real resumes: never commit them
+tests/data/
+accuracy_check.csv
